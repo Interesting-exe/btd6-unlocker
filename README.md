@@ -21,6 +21,7 @@ This mod has the following features:
   
 ### Get trophies
   Pressing F4 will give you 10000 trophies.
+  
   Please note that you can only access the trophy store by uninstalling melonloader or enabling the button using [UnityExplorer](https://github.com/sinai-dev/UnityExplorer).
   
   ![image](https://user-images.githubusercontent.com/52731127/204103912-8230be5c-d833-4e23-bc48-c35a2959335e.png)
