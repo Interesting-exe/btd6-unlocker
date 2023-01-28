@@ -1,4 +1,6 @@
 # btd6-unlocker
+[![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
+
 Unlocks and gives stuff in btd6
 
 This mod depends on [BTD-Mod-Helper](https://github.com/gurrenm3/BTD-Mod-Helper). <br />
