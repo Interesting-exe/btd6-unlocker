@@ -1,7 +1,8 @@
 # btd6-unlocker
 Unlocks and gives stuff in btd6
 
-This mod depends on [BTD-Mod-Helper](https://github.com/gurrenm3/BTD-Mod-Helper).
+This mod depends on [BTD-Mod-Helper](https://github.com/gurrenm3/BTD-Mod-Helper). <br />
+Make sure you follow the [install guide](https://github.com/gurrenm3/BTD-Mod-Helper/wiki/Install-Guide) when installing mod helper
 
 # Features
 This mod has the following features:
