@@ -1,20 +1,22 @@
 ﻿using BTD_Mod_Helper;
 using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Utils;
+using BTD_Mod_Helper.Api;
 using System.Collections.Generic;
 using BTD_Mod_Helper.Api.ModOptions;
 using BTD_Mod_Helper.Api.Components;
-using Assets.Scripts.Models;
+using Il2CppAssets.Scripts.Models;
+using Il2CppAssets.Scripts.Models.Knowledge;
 using MelonLoader;
 using UnityEngine;
-using Assets.Scripts.Unity.Player;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Knowledge;
-using Assets.Scripts.Data.TrophyStore;
-using Assets.Scripts.Data;
+using Il2CppAssets;
+using Il2CppAssets.Scripts.Data;
+using Il2CppAssets.Scripts.Data.TrophyStore;
+using Il2CppAssets.Scripts.Unity;
+using Il2CppAssets.Scripts.Unity.Player;
+using Il2CppAssets.Scripts.Utils;
 
 
-[assembly: MelonInfo(typeof(BTD6Unlocker.BTD6UnlockerMain), "BTD6 Unlocker", "1.0.0", "Interesting")]
+[assembly: MelonInfo(typeof(BTD6Unlocker.BTD6UnlockerMain), "BTD6 Unlocker", "1.0.1", "Interesting")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace BTD6Unlocker
 {
@@ -29,11 +31,11 @@ namespace BTD6Unlocker
 
         public override void OnUpdate()
         {
-            ModSettingHotkey instaHotkey = new ModSettingHotkey(KeyCode.F1, Assets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
-            ModSettingHotkey knowledgeHotkey = new ModSettingHotkey(KeyCode.F2, Assets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
-            ModSettingHotkey moneyAndXPHotkey = new ModSettingHotkey(KeyCode.F3, Assets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
-            ModSettingHotkey trophiesButton = new ModSettingHotkey(KeyCode.F4, Assets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
-            ModSettingHotkey unlockTrophyItemsButton = new ModSettingHotkey(KeyCode.F5, Assets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
+            ModSettingHotkey instaHotkey = new ModSettingHotkey(KeyCode.F1, Il2CppAssets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
+            ModSettingHotkey knowledgeHotkey = new ModSettingHotkey(KeyCode.F2, Il2CppAssets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
+            ModSettingHotkey moneyAndXPHotkey = new ModSettingHotkey(KeyCode.F3, Il2CppAssets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
+            ModSettingHotkey trophiesButton = new ModSettingHotkey(KeyCode.F4, Il2CppAssets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
+            ModSettingHotkey unlockTrophyItemsButton = new ModSettingHotkey(KeyCode.F5, Il2CppAssets.Scripts.Unity.UI_New.InGame.HotkeyModifier.None);
 
             //f1 gives all insta monkeys
             if (instaHotkey.JustPressed())
@@ -68,7 +70,7 @@ namespace BTD6Unlocker
             {
                 GameExt.AddMonkeyMoney(Game.instance, 1000000);
 
-                List<string> monkes = Helpers.ValidBaseTowerNames().ToList();
+                Il2CppSystem.Collections.Generic.List<string> monkes = Helpers.ValidBaseTowerNames();
                 foreach (string monke in monkes)
                 {
                     GameExt.GetBtd6Player(Game.instance).AddTowerXP(monke, 1000000);
